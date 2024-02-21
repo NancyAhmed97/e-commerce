@@ -1,4 +1,4 @@
-const {Brand} = require('../Models/brand');
+const Brand = require('../Models/brand');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
