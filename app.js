@@ -29,10 +29,12 @@ mongoose.connect(url).then(() => {
 
 
 const usersRoutes = require('./routes/users');
+const brandsRoutes = require('./routes/brands');
 
 const api = process.env.API_URL;
 
 app.use(`/users`, usersRoutes);
+app.use(`/brands`, brandsRoutes);
 
 //Database
 //mongoose.connect(process.env.CONNECTION_STRING)
