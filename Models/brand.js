@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const { productSchema} = require('../Models/products');
-const reviewSchema = new mongoose.Schema(
-    {
+const reviewSchema = new mongoose.Schema({
       name: { type: String, required: true },
       rating: { type: Number, default: 0 },
       comment: { type: String, required: true },
@@ -38,13 +37,6 @@ const brandSchema = new mongoose.Schema({
 
 });
 
-brandSchema.virtual('id').get(function () {
-    return this._id.toHexString();
-});
 
-brandSchema.set('toJSON', {
-    virtuals: true,
-});
-
-exports.Brand = mongoose.model('Brand', brandSchema);
-exports.brandSchema = brandSchema;
+const brandModel = mongoose.model('Brand', brandSchema);
+module.exports =brandModel;

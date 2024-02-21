@@ -21,8 +21,8 @@ router.get('/:id', async(req,res)=>{
     res.status(200).send(brand);
 })
 
-router.post('/',  (req,res)=>{
-    let brand = new Brand({
+router.post('/',async  (req,res)=>{
+    const brand = new Brand({
         name: req.body.name,
         copon: req.body.copon,
         logo: req.body.logo,
@@ -31,9 +31,16 @@ router.post('/',  (req,res)=>{
         headerImgs:req.body.headerImgs
      
     })
-    res.send("jkjvjv1");
-    res.send(brand);
-    res.send("jkjvjv2");
+    const newBrand = await brand.save();
+
+    if (newBrand) {
+        return res
+          .status(201)
+          .send({ message: 'New Product Created', data: newBrand });
+      }
+      return res.status(500).send({ message: ' Error in Creating Product.' });
+    
+
 
 
 //     brand = await Brand.save();
