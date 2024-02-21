@@ -32,7 +32,7 @@ router.post('/', async (req,res)=>{
         headerImgs:req.body.headerImgs
      
     })
-    res.send("jkjvjv1");
+    res.send("jkjvjv1",req);
 
     brand = await Brand.save();
     res.send("jkjvjv2",brand);
