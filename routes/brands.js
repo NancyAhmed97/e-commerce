@@ -32,6 +32,9 @@ router.post('/',  (req,res)=>{
      
     })
     res.send("jkjvjv1");
+    res.send(brand);
+    res.send("jkjvjv2");
+
 
 //     brand = await Brand.save();
 //     res.send("jkjvjv2",brand);
