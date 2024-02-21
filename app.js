@@ -44,8 +44,7 @@ app.use(`/users`, usersRoutes);
 //})
 
 
-
-app.listen(7000, ()=>{
+app.listen(2000, ()=>{
 
     console.log('server is running http://localhost:7000');
 })
