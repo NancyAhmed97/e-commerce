@@ -1,31 +1,40 @@
 const mongoose = require('mongoose');
-
+const { productSchema} = require('../Models/products');
+const reviewSchema = new mongoose.Schema(
+    {
+      name: { type: String, required: true },
+      rating: { type: Number, default: 0 },
+      comment: { type: String, required: true },
+      userId: { type: String, required: true },
+    },
+    {
+      timestamps: true,
+    }
+  );
 const brandSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
+        
     },
-    userID: {
-        type: String,
-        required: true,
+    copon: {
+        type: Array,
+        
     },
+    logo: { type: String, required: true },
+    reviews: [reviewSchema],
 
-    Kamlik: {
-        type: String,
-        required: true,
+ 
+    Products: {
+        type: [productSchema],
+        
     },
-    belgeNo: {
-        type: String,
-        required: true,
+    offers: {
+        type: Array,
+        
     },
-    egitim: {
-        type: String,
-        required: true,
-    },
-    aciklama: {
-        type: String,
-        required: false,
-    },
+    headerImgs:{
+        type:Array
+    }
 
 });
 

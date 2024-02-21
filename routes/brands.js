@@ -24,11 +24,11 @@ router.get('/:id', async(req,res)=>{
 router.post('/', async (req,res)=>{
     let brand = new Brand({
         name: req.body.name,
-        userID: req.body.userID,
-        Kamlik: req.body.Kamlik,
-        belgeNo: req.body.belgeNo,
-        egitim: req.body.egitim,
-        aciklama: req.body.aciklama,
+        copon: req.body.copon,
+        logo: req.body.logo,
+        Products: req.body.Products,
+        offers: req.body.offers,
+        headerImgs:req.body.headerImgs
      
     })
     brand = await Brand.save();
