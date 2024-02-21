@@ -36,7 +36,7 @@ router.post('/', async (req,res)=>{
 
     // if(!brand)
     // return res.status(400).send('the brand cannot be created!')
-res.send(req);
+res.send("jkjvjv");
 })
 
 router.put('/:id',async (req, res)=> {
