@@ -32,11 +32,14 @@ router.post('/', async (req,res)=>{
         headerImgs:req.body.headerImgs
      
     })
+    res.send("jkjvjv1");
+
     brand = await Brand.save();
+    res.send("jkjvjv2",brand);
 
     if(!brand)
     return res.status(400).send('the brand cannot be created!')
-res.send("jkjvjv",brand);
+res.send("jkjvjv3",brand);
 
 })
 
