@@ -22,15 +22,15 @@ router.get('/:id', async(req,res)=>{
 })
 
 router.post('/',  (req,res)=>{
-    // let brand = new Brand({
-    //     name: req.body.name,
-    //     copon: req.body.copon,
-    //     logo: req.body.logo,
-    //     Products: req.body.Products,
-    //     offers: req.body.offers,
-    //     headerImgs:req.body.headerImgs
+    let brand = new Brand({
+        name: req.body.name,
+        copon: req.body.copon,
+        logo: req.body.logo,
+        Products: req.body.Products,
+        offers: req.body.offers,
+        headerImgs:req.body.headerImgs
      
-    // })
+    })
     res.send("jkjvjv1");
 
 //     brand = await Brand.save();
