@@ -22,21 +22,22 @@ router.get('/:id', async(req,res)=>{
 })
 
 router.post('/', async (req,res)=>{
-    let brand = new Brand({
-        name: req.body.name,
-        copon: req.body.copon,
-        logo: req.body.logo,
-        Products: req.body.Products,
-        offers: req.body.offers,
-        headerImgs:req.body.headerImgs
+    console.log(req);
+    // let brand = new Brand({
+    //     name: req.body.name,
+    //     copon: req.body.copon,
+    //     logo: req.body.logo,
+    //     Products: req.body.Products,
+    //     offers: req.body.offers,
+    //     headerImgs:req.body.headerImgs
      
-    })
-    brand = await Brand.save();
+    // })
+    // brand = await Brand.save();
 
-    if(!brand)
-    return res.status(400).send('the brand cannot be created!')
+    // if(!brand)
+    // return res.status(400).send('the brand cannot be created!')
 
-    res.send(brand);
+    // res.send(brand);
 })
 
 router.put('/:id',async (req, res)=> {
