@@ -21,7 +21,7 @@ router.get('/:id', async(req,res)=>{
     res.status(200).send(brand);
 })
 
-router.post('/', async (req,res)=>{
+router.post('/',  (req,res)=>{
     // let brand = new Brand({
     //     name: req.body.name,
     //     copon: req.body.copon,
@@ -31,7 +31,7 @@ router.post('/', async (req,res)=>{
     //     headerImgs:req.body.headerImgs
      
     // })
-    res.send("jkjvjv1",req.body.name);
+    res.send("jkjvjv1");
 
 //     brand = await Brand.save();
 //     res.send("jkjvjv2",brand);
